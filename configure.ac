@@ -33,7 +33,7 @@ AC_ARG_ENABLE([openmp],	AC_HELP_STRING([--enable-openmp], [enable openmp (defaul
 AC_PROG_CC
 AC_PROG_F77
 AC_F77_WRAPPERS
-AM_PATH_PYTHON([2.4],, AC_MSG_ERROR(Could not find Python >=2.4. Please set PYTHON to Python interpreter path.))
+AM_PATH_PYTHON([2.6],, AC_MSG_ERROR(Could not find Python >=2.6. Please set PYTHON to Python interpreter path.))
 AC_CHECK_PROGS(PDFLATEX, pdflatex, no)
 AC_CHECK_PROGS(BIBTEX, bibtex, no)
 AM_CONDITIONAL(HAVE_PDFLATEX, test $PDFLATEX != no)

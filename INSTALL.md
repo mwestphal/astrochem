@@ -16,7 +16,7 @@ To compile Astrochem you will need:
    You will need at least version 2.4.0 of the library installed on
    your computer.
 
-3. Python (version 2.4 or later, but earlier than version 3.0).
+3. Python (version 2.6 or later)
 
 4. The [NumPy](http://numpy.scipy.org/) and
    [Biggles](http://biggles.sourceforge.net/) Python modules.  Numpy

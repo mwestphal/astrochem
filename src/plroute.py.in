@@ -37,7 +37,7 @@ def usage():
 
     """
 
-    print """Usage: plroute [options] file
+    print("""Usage: plroute [options] file
 
 Plot formation/destruction rates vs. time
 
@@ -52,8 +52,8 @@ Options:
    -c, --chmfile=file       Specify chemical network file
    -p, --percent            Print the relative contribution of each route
    
-See the plroute(1) man page for more information"""
-    print "Report bugs to <%s>." % PACKAGE_BUGREPORT
+See the plroute(1) man page for more information""")
+    print("Report bugs to <%s>." % PACKAGE_BUGREPORT)
 
 def version():
     """
@@ -61,12 +61,12 @@ def version():
 
     """
 
-    print "This is plroute, version %s" % PACKAGE_VERSION
-    print """Copyright (c) 2006-2014 Sebastien Maret
+    print("This is plroute, version %s" % PACKAGE_VERSION)
+    print("""Copyright (c) 2006-2014 Sebastien Maret
 
 This is free software. You may redistribute copies of it under the terms
 of the GNU General Public License. There is NO WARRANTY, to the extent
-permitted by law."""
+permitted by law.""")
 
 def curveblank(xvalues, yvalues, blanking = 0, linecolor = "black",
                linetype = "solid"):
