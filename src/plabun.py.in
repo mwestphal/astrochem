@@ -73,12 +73,12 @@ def main():
 
     # Parse options and arguments
     try:
-	opts, args = getopt.getopt(sys.argv[1:], "hVo:s:x:y:",
-				   ["help", "version", "output=",
+        opts, args = getopt.getopt(sys.argv[1:], "hVo:s:x:y:",
+                                   ["help", "version", "output=",
                                     "shell=", "xrange=", "yrange="])
     except getopt.GetoptError:
-	usage()
-	sys.exit(1)
+        usage()
+        sys.exit(1)
 
     output = None
     s =  0
@@ -87,15 +87,15 @@ def main():
     model = None
 
     for opt, arg in opts:
-	if opt in ("-h", "--help") :
-	    usage()
-	    sys.exit()
-	if opt in ("-V", "--version") :
-	    version()
-	    sys.exit()
-	if opt in ("-o", "--output"):
-	    output = arg
-	if opt in ("-s", "--shell"):
+        if opt in ("-h", "--help") :
+            usage()
+            sys.exit()
+        if opt in ("-V", "--version") :
+            version()
+            sys.exit()
+        if opt in ("-o", "--output"):
+            output = arg
+        if opt in ("-s", "--shell"):
             try:
                 s = int(arg)
             except:
@@ -117,8 +117,8 @@ def main():
             model = arg
 
     if len(args) == 0:
-	usage()
-	sys.exit(1)
+        usage()
+        sys.exit(1)
 
     # Ignore commands, for backward compatibility
     if args[0] == "time":
@@ -135,7 +135,7 @@ def main():
     if len(filenames) > 6:
         sys.stderr.write("plabun: warning: at most 6 species can be plotted, ignoring others.\n")
         filenames = filenames[0:5]
-	
+
     p = biggles.FramedPlot()
     p.title = "Abundances"
     p.xtitle = "Time (yr)"
@@ -143,9 +143,9 @@ def main():
     p.ytitle = "$n(x)/n_{H}$"
     p.ylog = 1
     if xrange:
-	p.xrange = xrange
+        p.xrange = xrange
     if yrange:
-	p.yrange = yrange
+        p.yrange = yrange
     curves = []
 
     # Stack for line colors
@@ -201,8 +201,8 @@ def main():
         sys.exit(1)
     
     if output:
-	p.write_eps(output)
+        p.write_eps(output)
     else:
         p.show()
 
-main()			  
+main()
